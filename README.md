@@ -8,6 +8,8 @@ time durations.
 **IMPORTANT**: These custom functions are only supported in the latest subscription versions of
 Office for Windows, Mac, or the web (NOT in one-time purchase versions of Office 2019 or earlier).
 
+*Using Google Sheets instead? Check out [gsheets-timecode](https://github.com/barndollarmusic/gsheets-timecode)*.
+
 Designed for film & television composers, though these may be useful for anyone who works with
 timecode values in Microsoft Excel.
 
@@ -39,7 +41,7 @@ based on
 1. Open [manifest.xml](manifest.xml) and press the **Raw** button
 1. Save the contents of this file to your computer as `C:\OfficeAddIns\ExcelTimecode.xml`
 1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecode.xml.txt`)
-1. Open Excel
+1. Open Excel and start a new blank workbook
 1. Go to **File > Options > Trust Center > Trust Center Settings...**
 1. Select **Trusted Add-in Catalogs** on the left
 1. Enter the shared folder path (for example, `\\YOUR-PC-NAME\OfficeAddIns`) in the input box next to Catalog URL and press the **Add catalog** button
@@ -53,7 +55,19 @@ If successful, you should see a Timecode section all the way to the right of the
 
 ### Excel for Mac
 
-**TODO**: Document how to do this.
+1. Open [manifest.xml](manifest.xml) and press the **Raw** button
+1. Save the contents of this file to your computer to your *Desktop* as `ExcelTimecode.xml`
+1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecode.xml.txt`)
+1. Open a Finder window to your Desktop so you can see this downloaded file
+1. **File > New Finder Window** to open another window
+1. Hold down the **Option** key, then click the **Go** menu and select **Library**, which opens the
+folder `/Users/<username>/Library/`
+1. Navigate down to `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/Documents/wef` (and if the last `wef` folder doesn't exist, create it)
+1. Drag `ExcelTimecode.xml` from the first Finder window into the `wef` folder in the second
+1. Open Excel and start a new blank workbook
+1. Go the the **Insert** tab in the top ribbon menu and click the **dropdown arrow** next to *My Add-ins* and select **excel-timecode** (which should show up in the dropdown menu underneath *Developer Add-ins*)
+
+If successful, you should see a Timecode section all the way to the right of the **Home** tab in the top ribbon, and all these custom functions will now be available.
 
 # Using custom functions
 The last 2 arguments to every function below are `frameRate` and `dropType` values.
@@ -146,7 +160,7 @@ repository: [gsheets-timecode](https://github.com/barndollarmusic/gsheets-timeco
 If you make changes to [manifest.xml](manifest.xml), see
 [Clear the Office Cache](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache).
 
-# Testing with Excel Locally
+# Testing with Excel for Local Code Development
 
 Open this project in Visual Studio Code.
 - **Terminal > Run Task... > Watch**
