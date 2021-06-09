@@ -13,15 +13,12 @@
   <IconUrl DefaultValue="https://barndollarmusic.z13.web.core.windows.net/assets/icon-32.png"/>
   <HighResolutionIconUrl DefaultValue="https://barndollarmusic.z13.web.core.windows.net/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://github.com/barndollarmusic/excel-timecode"/>
-  <AppDomains>
-    <AppDomain>https://barndollarmusic.com</AppDomain>
-  </AppDomains>
   <Hosts>
     <Host Name="Workbook"/>
   </Hosts>
   <Requirements>
-    <Sets DefaultMinVersion="1.1">
-      <Set Name="CustomFunctionsRuntime" MinVersion="1.1"/>
+    <Sets DefaultMinVersion="1.2">
+      <Set Name="CustomFunctionsRuntime" MinVersion="1.2"/>
     </Sets>
   </Requirements>
   <DefaultSettings>
