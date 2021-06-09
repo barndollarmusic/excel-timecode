@@ -9,7 +9,7 @@ time durations.
 Office for Windows, Mac, or the web (NOT in one-time purchase versions of Office 2019 or earlier).
 
 Designed for film & television composers, though these may be useful for anyone who works with
-timecode values in Google Sheets.
+timecode values in Microsoft Excel.
 
 Primary Author: [Eric Barndollar](https://barndollarmusic.com)
 
