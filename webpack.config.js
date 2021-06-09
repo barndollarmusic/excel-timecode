@@ -61,8 +61,12 @@ module.exports = async (env, options) => {
       }),
       new CopyWebpackPlugin([
         {
-          to: 'taskpane.css',
-          from: './src/taskpane/taskpane.css'
+          from: './src/taskpane/taskpane.css',
+          to: 'taskpane.css'
+        },
+        {
+          from: './assets/**/*',
+          to: './'
         }
       ]),
       new HtmlWebpackPlugin({

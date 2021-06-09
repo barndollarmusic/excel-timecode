@@ -3,6 +3,8 @@
 Microsoft Excel custom functions (JavaScript) for working with video timecode standards and wall
 time durations.
 
+![Preview of spreadsheet using timecode functions](preview.png)
+
 **IMPORTANT**: These custom functions are only supported in the latest subscription versions of
 Office for Windows, Mac, or the web (NOT in one-time purchase versions of Office 2019 or earlier).
 
@@ -13,6 +15,45 @@ Primary Author: [Eric Barndollar](https://barndollarmusic.com)
 
 This is open source software that is free to use and share, as covered by the
 [MIT License](LICENSE).
+
+# Use in your own spreadsheets
+
+**TODO**: Share Excel Spreadsheet templates for Music Log and Spotting that use these functions.
+
+## TEMPORARY Installation Instructions
+
+**NOTE**: Currently in the process of publishing this project to
+[AppSource](https://appsource.microsoft.com/), which will greatly simplify the end user
+installation complexity here. In the meantime, you'll have to do some extra work (this process is
+based on
+[these Microsoft instructions](https://docs.microsoft.com/en-us/office/dev/add-ins/publish/host-an-office-add-in-on-microsoft-azure).
+
+### Excel for Windows
+
+1. Open Windows Explorer (`⊞ Win + E`)
+1. Within the left panel, click your `C:` disk under *This PC*
+1. Create a new folder directly under the `C:` drive (**Right Click > New > Folder**), and name the new folder `OfficeAddIns`
+1. On the newly created folder, **Right Click > Give access to > Specific people...**
+1. Select `Everyone` from the dropdown box and click **Add**
+1. Press **Share** button. Make a note of the path that begins with `\\` under `OfficeAddIns` (for example, `\\YOUR-PC-NAME\OfficeAddIns`)
+1. Open [manifest.xml](manifest.xml) and press the **Raw** button
+1. Save the contents of this file to your computer as `C:\OfficeAddIns\ExcelTimecode.xml`
+1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecode.xml.txt`)
+1. Open Excel
+1. Go to **File > Options > Trust Center > Trust Center Settings...**
+1. Select **Trusted Add-in Catalogs** on the left
+1. Enter the shared folder path (for example, `\\YOUR-PC-NAME\OfficeAddIns`) in the input box next to Catalog URL and press the **Add catalog** button
+1. Check the **Show in Menu** box and then click **OK** to close the dialog
+1. Click **OK** to close the Options dialog
+1. Go the the **Insert** tab in the top ribbon menu and click the **My Add-ins** button
+1. Under the *Office Add-ins* title, click the text that says **SHARED FOLDER**
+1. Click **excel-timecode** and press **Add**
+
+If successful, you should see a Timecode section all the way to the right of the **Home** tab in the top ribbon, and all these custom functions will now be available.
+
+### Excel for Mac
+
+**TODO**: Document how to do this.
 
 # Using custom functions
 The last 2 arguments to every function below are `frameRate` and `dropType` values.
