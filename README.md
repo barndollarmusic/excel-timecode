@@ -18,11 +18,15 @@ Primary Author: [Eric Barndollar](https://barndollarmusic.com)
 This is open source software that is free to use and share, as covered by the
 [MIT License](LICENSE).
 
-# Use in your own spreadsheets
+# Sample Spreadsheet
 
-**TODO**: Share Excel Spreadsheet templates for Music Log that uses these functions.
+**IMPORTANT**: Follow installation instructions below to configure this Add-In before opening
+the example spreadsheet.
 
-## Installation Instructions
+Download [XYZ_Music_Log_Template.xlsx](XYZ_Music_Log_Template.xlsx) for an example cue tracking
+spreadsheet that uses these custom timecode functions.
+
+# Installation Instructions
 
 ![Screenshot of excel-timecode Add-In in the Excel ribbon](addin_ribbon.png)
 
@@ -33,7 +37,7 @@ These installation steps are based on
 [these Microsoft instructions](https://docs.microsoft.com/en-us/office/dev/add-ins/publish/host-an-office-add-in-on-microsoft-azure),
 so check there for any updated steps if the procedure below isn't working for you.
 
-### Excel for Windows
+## Excel for Windows
 
 1. Open Windows Explorer (`⊞ Win + E`)
 1. Within the left panel, click your `C:` disk under *This PC*
@@ -57,7 +61,7 @@ so check there for any updated steps if the procedure below isn't working for yo
 
 If successful, you should see a Timecode section all the way to the right of the **Home** tab in the top ribbon, and all these custom functions will now be available.
 
-### Excel for Mac
+## Excel for Mac
 
 1. Open [ExcelTimecodeManifest.xml](ExcelTimecodeManifest.xml) and press the **Raw** button
 1. Save the contents of this file to your computer to your *Desktop* as `ExcelTimecode.xml`
