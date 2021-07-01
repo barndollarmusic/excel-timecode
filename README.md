@@ -1,7 +1,7 @@
 # excel-timecode
 
 Microsoft Excel custom functions (JavaScript) for working with video timecode standards and wall
-time durations.
+time durations. Available as an Office Add-In (see instructions below).
 
 ![Preview of spreadsheet using timecode functions](preview.png)
 
@@ -20,15 +20,18 @@ This is open source software that is free to use and share, as covered by the
 
 # Use in your own spreadsheets
 
-**TODO**: Share Excel Spreadsheet templates for Music Log and Spotting that use these functions.
+**TODO**: Share Excel Spreadsheet templates for Music Log that uses these functions.
 
-## TEMPORARY Installation Instructions
+## Installation Instructions
 
-**NOTE**: Currently in the process of publishing this project to
-[AppSource](https://appsource.microsoft.com/), which will greatly simplify the end user
-installation complexity here. In the meantime, you'll have to do some extra work (this process is
-based on
-[these Microsoft instructions](https://docs.microsoft.com/en-us/office/dev/add-ins/publish/host-an-office-add-in-on-microsoft-azure).
+![Screenshot of excel-timecode Add-In in the Excel ribbon](addin_ribbon.png)
+
+**NOTE**: Fair warning&mdash;you will have to jump through a few hoops to load this Add-In on each
+computer that you want to use with Excel.
+
+These installation steps are based on
+[these Microsoft instructions](https://docs.microsoft.com/en-us/office/dev/add-ins/publish/host-an-office-add-in-on-microsoft-azure),
+so check there for any updated steps if the procedure below isn't working for you.
 
 ### Excel for Windows
 
@@ -38,15 +41,16 @@ based on
 1. On the newly created folder, **Right Click > Give access to > Specific people...**
 1. Select `Everyone` from the dropdown box and click **Add**
 1. Press **Share** button. Make a note of the path that begins with `\\` under `OfficeAddIns` (for example, `\\YOUR-PC-NAME\OfficeAddIns`)
-1. Open [manifest.xml](manifest.xml) and press the **Raw** button
-1. Save the contents of this file to your computer as `C:\OfficeAddIns\ExcelTimecode.xml`
-1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecode.xml.txt`)
+1. Open [ExcelTimecodeManifest.xml](ExcelTimecodeManifest.xml) and press the **Raw** button
+1. Save the contents of this file to your computer as `C:\OfficeAddIns\ExcelTimecodeManifest.xml`
+1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecodeManifest.xml.txt`)
 1. Open Excel and start a new blank workbook
 1. Go to **File > Options > Trust Center > Trust Center Settings...**
 1. Select **Trusted Add-in Catalogs** on the left
 1. Enter the shared folder path (for example, `\\YOUR-PC-NAME\OfficeAddIns`) in the input box next to Catalog URL and press the **Add catalog** button
 1. Check the **Show in Menu** box and then click **OK** to close the dialog
 1. Click **OK** to close the Options dialog
+1. Restart Excel and start another new blank workbook
 1. Go the the **Insert** tab in the top ribbon menu and click the **My Add-ins** button
 1. Under the *Office Add-ins* title, click the text that says **SHARED FOLDER**
 1. Click **excel-timecode** and press **Add**
@@ -55,7 +59,7 @@ If successful, you should see a Timecode section all the way to the right of the
 
 ### Excel for Mac
 
-1. Open [manifest.xml](manifest.xml) and press the **Raw** button
+1. Open [ExcelTimecodeManifest.xml](ExcelTimecodeManifest.xml) and press the **Raw** button
 1. Save the contents of this file to your computer to your *Desktop* as `ExcelTimecode.xml`
 1. (Make sure your browser didn't really save it with an extra `.txt` extension as `ExcelTimecode.xml.txt`)
 1. Open a Finder window to your Desktop so you can see this downloaded file
@@ -152,15 +156,32 @@ wall time measured from `00:00:00:00`).
 after (*i.e.* to the right of) the given `wallSecs` value of `1.041` (true seconds of
 wall time measured from `00:00:00:00`).
 
+# Acknowledgements &amp; Other Resources
+
+Special thanks to [Eduardo Delgado](https://sonicscapeproductions.com/) for suggesting improvements
+and helping with the Excel version.
+
+Find the link to Shie Rozow's **SR Show Cue Manager** Google Sheet template along with excellent
+advice for collaborative project management and organization:
+*[Scoring Films on a Shoestring Budget](https://shierozow.com/scoring-films-on-a-shoestring-budget/)*
+
+Tim Starnes also has a great *[File Naming and Organization](https://youtu.be/z88kv81yKTk)* video on
+the Cinesamples YouTube channel.
+
 # Contributing Code
 
 For the custom functions themselves, please first update and test your changes to this
 repository: [gsheets-timecode](https://github.com/barndollarmusic/gsheets-timecode).
 
-If you make changes to [manifest.xml](manifest.xml), see
-[Clear the Office Cache](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache).
-
 # Testing with Excel for Local Code Development
+
+See
+[Clear the Office Cache](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache)
+for instructions on clearing all previous sideloaded Add-Ins.
+
+Note that local development scripts use [LocalDevManifest.xml](LocalDevManifest.xml), which serves
+from the local development server (`localhost:3000`) instead of the production version
+([ExcelTimecodeManifest.xml](ExcelTimecodeManifest.xml)).
 
 Open this project in Visual Studio Code.
 - **Terminal > Run Task... > Watch**

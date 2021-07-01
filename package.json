@@ -17,11 +17,11 @@
     "build:dev": "webpack --mode development --https true",
     "build-dev": "webpack --mode development --https true && echo . && echo . && echo . && echo Please use 'build:dev' instead of 'build-dev'.",
     "dev-server": "webpack-dev-server --mode development",
-    "start": "office-addin-debugging start manifest.xml",
-    "start:desktop": "office-addin-debugging start manifest.xml desktop",
-    "start:web": "office-addin-debugging start manifest.xml web",
-    "stop": "office-addin-debugging stop manifest.xml",
-    "validate": "office-addin-manifest validate manifest.xml",
+    "start": "office-addin-debugging start LocalDevManifest.xml",
+    "start:desktop": "office-addin-debugging start LocalDevManifest.xml desktop",
+    "start:web": "office-addin-debugging start LocalDevManifest.xml web",
+    "stop": "office-addin-debugging stop LocalDevManifest.xml",
+    "validate": "office-addin-manifest validate ExcelTimecodeManifest.xml",
     "watch": "webpack --mode development --watch"
   },
   "devDependencies": {
