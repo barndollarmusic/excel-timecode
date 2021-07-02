@@ -80,7 +80,7 @@ If successful, you should see a Timecode section all the way to the right of the
 # Using custom functions
 The last 2 arguments to every function below are `frameRate` and `dropType` values.
 
-Data validation list of supported `frameRate` values (see templates above for example usage):
+Data validation list of supported `frameRate` values (see template above for example usage):
 ```
 23.976,24.000,25.000,29.970,30.000,47.952,48.000,50.000,59.940,60.000
 ```
@@ -88,7 +88,7 @@ Data validation list of supported `frameRate` values (see templates above for ex
 2 or 3 decimal digits after a period. This is to avoid any possible confusion over *e.g.* whether
 `24` means `23.976` or `24.000`.
 
-Data validation list of `dropType` values (see templates above for example usage):
+Data validation list of `dropType` values (see template above for example usage):
 ```
 non-drop,drop
 ```
