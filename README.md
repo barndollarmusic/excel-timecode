@@ -71,11 +71,19 @@ If successful, you should see a Timecode section all the way to the right of the
 1. Hold down the **Option** key, then click the **Go** menu and select **Library**, which opens the
 folder `/Users/<username>/Library/`
 1. Navigate down to `/Users/<username>/Library/Containers/com.microsoft.Excel/Data/Documents/wef` (and if the last `wef` folder doesn't exist, create it)
-1. Drag `ExcelTimecode.xml` from the first Finder window into the `wef` folder in the second
+1. Drag `ExcelTimecode.xml` from the first Finder window into the `wef` folder in the second. (Note if you are updating to a newer version and replacing this file, you may need to close all Office programs and either force quit Finder or restart your computer for macOS to let you replace the older file).
 1. Open Excel and start a new blank workbook
 1. Go the the **Insert** tab in the top ribbon menu and click the **dropdown arrow** next to *My Add-ins* and select **excel-timecode** (which should show up in the dropdown menu underneath *Developer Add-ins*)
 
 If successful, you should see a Timecode section all the way to the right of the **Home** tab in the top ribbon, and all these custom functions will now be available.
+
+## Updating to a Newer Version
+
+I'll keep a version log below of any substantial changes (bug fixes or new features) that would require repeating the above instructions. You will also need to follow these steps to [Clear the Office Cache](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/clear-cache) before updating.
+
+| Date       | Version Notes   |
+| -----------| --------------- |
+| 2021-07-01 | Initial release |
 
 # Using custom functions
 The last 2 arguments to every function below are `frameRate` and `dropType` values.
