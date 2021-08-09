@@ -86,6 +86,9 @@ I'll keep a version log below of any substantial changes (bug fixes or new featu
 | 2021-07-01 | Initial release |
 
 # Using custom functions
+Here's a spreadsheet that will walk you through how to use all of these functions:
+- [Tutorial_excel-timecode.xlsx](Tutorial_excel-timecode.xlsx)
+
 The last 2 arguments to every function below are `frameRate` and `dropType` values.
 
 Data validation list of supported `frameRate` values (see template above for example usage):
